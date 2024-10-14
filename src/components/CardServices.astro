@@ -1,0 +1,13 @@
+---
+const { nameCard, href, title } = Astro.props;
+---
+
+<a
+  class=`${Astro.props.class} h-64 bg-cover bg-no-repeat bg-center font-semibold`
+  href={href}
+  title={title}
+  ><span
+    class="h-full w-full py-5 px-6 text-2xl relative flex items-end backdrop-brightness-[.6]"
+    >{nameCard}</span
+  ></a
+>
