@@ -20,8 +20,13 @@ const { title } = Astro.props;
     <slot />
   </body>
 </html>
-<style>
-  html {
+<style is:global>
+  html{
     color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  *{
+     line-height: normal;
   }
 </style>

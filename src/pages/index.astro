@@ -28,7 +28,10 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
     </nav>
   </header>
 
-  <main class="w-full h-full flex flex-col gap-16 items-center justify-center">
+  <main
+    id="Inicio"
+    class="w-full h-full flex flex-col gap-16 items-center justify-center"
+  >
     <section
       class="w-full h-[860px] bg-[url('/assets/img/hero-image.webp')] bg-no-repeat bg-cover bg-center relative"
     >
@@ -96,7 +99,7 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
     </section>
 
     <section
-      class="w-full flex justify-center h-64 bg-[url('/assets/img/Arquitectura.webp')] bg-cover bg-no-repeat bg-center"
+      class="w-full flex justify-center h-72 bg-[url('/assets/img/Arquitectura.webp')] bg-cover bg-no-repeat bg-center"
     >
       <header
         class="w-full max-w-[1920px] h-full grid place-content-center grid-cols-auto-data backdrop-brightness-[.65] px-12"
@@ -114,7 +117,7 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
       </header>
 
       <footer class="w-full grid grid-cols-auto-12 gap-5">
-        <picture class="w-full h-72 col-span-8 relative flex items-end">
+        <picture class="w-full h-80 col-span-8 relative flex items-end">
           <img
             class="w-full h-full object-cover brightness-[.4]"
             src="/assets/img/Obrero.webp"
@@ -141,35 +144,33 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
       </header>
 
       <footer class="w-full grid grid-cols-auto-12 gap-5">
-        <picture class="w-full h-72 col-span-12 relative flex items-end">
+        <picture class="w-full h-80 col-span-12 relative flex items-end">
           <img
-            class="w-full h-full object-cover brightness-[.4]"
-            src="/assets/img/Obrero.webp"
+            class="w-full h-full object-cover brightness-[.7]"
+            src="/assets/img/Proyectadora.webp"
             loading="lazy"
             title="Imagen de Obrero"
             alt="Imagen de Obrero"
           />
           <h3 class="py-5 px-6 absolute text-2xl font-semibold">
-            Sobre nuestra empresa
+            Maquina Proyectadora
           </h3>
         </picture>
 
-        <picture class="w-full h-72 col-span-6 relative flex items-end">
+        <picture class="w-full h-80 col-span-6 relative flex items-end">
           <img
-            class="w-full h-full object-cover brightness-[.4]"
-            src="/assets/img/Obrero.webp"
+            class="w-full h-full object-cover brightness-[.7]"
+            src="/assets/img/Hormigonera.webp"
             loading="lazy"
             title="Imagen de Obrero"
             alt="Imagen de Obrero"
           />
-          <h3 class="py-5 px-6 absolute text-2xl font-semibold">
-            Sobre nuestra empresa
-          </h3>
+          <h3 class="py-5 px-6 absolute text-2xl font-semibold">Hormigonera</h3>
         </picture>
 
-        <picture class="w-full h-72 col-span-6 relative flex items-end">
+        <picture class="w-full h-80 col-span-6 relative flex items-end">
           <img
-            class="w-full h-full object-cover brightness-[.4]"
+            class="w-full h-full object-cover brightness-[.7]"
             src="/assets/img/Obrero.webp"
             loading="lazy"
             title="Imagen de Obrero"
@@ -188,7 +189,7 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
       </header>
 
       <footer class="w-full grid grid-cols-auto-12 gap-5">
-        <picture class="w-full h-72 col-span-8 relative flex items-end">
+        <picture class="w-full h-80 col-span-8 relative flex items-end">
           <img
             class="w-full h-full object-cover brightness-[.4]"
             src="/assets/img/Planos.webp"
@@ -207,11 +208,11 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
           footer="Director - Limber Zerda"
         >
           <slot slot="contact">
-            <span class="flex items-center gap-2 mt-2 mb-1">
-              <IconMail class="w-7" /> construccionesenyeseria.limber@gmail.com</span
+            <span class="flex items-center gap-1 mt-2 mb-1 leading-normal">
+              <IconMail class="w-5" /> construccionesenyeseria.limber@gmail.com</span
             >
-            <span class="flex items-center gap-2">
-              <IconPhone class="w-7" /> +54 9 11 5924-9503</span
+            <span class="flex items-center gap-1 leading-normal">
+              <IconPhone class="w-5" /> +54 9 11 5924-9503</span
             >
           </slot>
         </CardInfo>
@@ -225,19 +226,47 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
         <LogoLight class="w-40" />
       </picture>
 
-      <div class="flex">
-        <header class="flex gap-14">
+      <div class="flex flex-col gap-6">
+        <header class="flex items-center gap-14">
           <nav class="flex gap-7">
-            <a class="w-10 h-10 bg-[#323232] rounded-full flex justify-center items-center" href="/" aria-label="Instagram">
-              <IconInstagram class="w-6" />
+            <a
+              class="w-10 h-10 bg-[#323232] rounded-full flex justify-center items-center"
+              href="/"
+              aria-label="Instagram"
+            >
+              <IconInstagram class="w-5" />
             </a>
-            <a class="w-10 h-10 bg-[#323232] rounded-full flex justify-center items-center" href="/" aria-label="Linkedin"><IconLinkedin class="w-6" /></a>
-            <a class="w-10 h-10 bg-[#323232] rounded-full flex justify-center items-center" href="/" aria-label="Facebook"><IconFacebook class="w-6" /></a>
-            <a class="w-10 h-10 bg-[#323232] rounded-full flex justify-center items-center" href="/" aria-label="WhatsApp"><IconWhatsApp class="w-6" /></a>
+            <a
+              class="w-10 h-10 bg-[#323232] rounded-full flex justify-center items-center"
+              href="/"
+              aria-label="Linkedin"><IconLinkedin class="w-5" /></a
+            >
+            <a
+              class="w-10 h-10 bg-[#323232] rounded-full flex justify-center items-center"
+              href="/"
+              aria-label="Facebook"><IconFacebook class="w-5" /></a
+            >
+            <a
+              class="w-10 h-10 bg-[#323232] rounded-full flex justify-center items-center"
+              href="/"
+              aria-label="WhatsApp"><IconWhatsApp class="w-5" /></a
+            >
           </nav>
-          <a href="/" class="text-lg w-full h-full flex items-center">Volver al inicio <IconArrowUp class="w-7" /> </a>
+          <a href="#Inicio" class="text-base w-full h-full flex items-center"
+            >Volver al inicio <IconArrowUp class="w-6 mt-[2px]" />
+          </a>
         </header>
-        <footer></footer>
+        <footer>
+          <p class="text-[#B0B0B0]">
+            Desarrollado por <a
+              class="text-white"
+              target="_blank"
+              title="Contactar via Linkedin"
+              href="https://www.linkedin.com/in/sebastian-perezz/"
+              >Sebastian Perez</a
+            > - Todos los derechos reservados
+          </p>
+        </footer>
       </div>
     </footer>
   </main>
