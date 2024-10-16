@@ -11,6 +11,7 @@ import IconFacebook from "../../public/assets/svg/IconFacebook.astro";
 import IconInstagram from "../../public/assets/svg/IconInstagram.astro";
 import IconLinkedin from "../../public/assets/svg/IconLinkedin.astro";
 import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
+import IconOpen from "../../public/assets/svg/IconOpen.astro";
 ---
 
 <Layout title="LZC - Empresa Constructora">
@@ -18,18 +19,18 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
     <nav
       class="w-full max-w-[1920px] px-12 py-4 flex justify-center items-center gap-16 text-lg"
     >
-      <a href="#" title="Servicios">Servicios</a>
-      <a href="#" title="Nosotros">Nosotros</a>
+      <a href="#services" title="Servicios">Servicios</a>
+      <a href="#us" title="Nosotros">Nosotros</a>
       <a aria-label="Logo LZC" title="Logo LZC" href="/">
         <LogoLight class="w-40" />
       </a>
-      <a href="#" title="Maquinaria">Maquinaria</a>
-      <a href="#" title="Contacto">Contacto</a>
+      <a href="#machines" title="Maquinaria">Maquinaria</a>
+      <a href="#contact" title="Contacto">Contacto</a>
     </nav>
   </header>
 
   <main
-    id="Inicio"
+    id="inicio"
     class="w-full h-full flex flex-col gap-16 items-center justify-center"
   >
     <section
@@ -44,7 +45,7 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
           <h1 class="text-5xl font-semibold">
             Creando Espacios, Construyendo Confianza
           </h1>
-          <p class="text-xl w-[120ch] text-pretty">
+          <p class="text-xl w-[120ch] max-w-full text-pretty">
             Convertimos tus ideas en realidad con un enfoque innovador y una
             calidad insuperable. Contamos con años de experiencia, te ofrecemos
             un servicio personalizado y sin complicaciones para asegurar el
@@ -54,7 +55,10 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
       </header>
     </section>
 
-    <section class="w-full h-full flex flex-col gap-5 px-12 max-w-[1920px]">
+    <section
+      id="services"
+      class="w-full h-full flex flex-col gap-5 px-12 max-w-[1920px]"
+    >
       <header class="w-full">
         <h2 class="text-[32px] font-semibold">Servicios</h2>
       </header>
@@ -111,13 +115,16 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
       </header>
     </section>
 
-    <section class="w-full h-full flex flex-col gap-5 px-12 max-w-[1920px]">
+    <section
+      id="us"
+      class="w-full h-full flex flex-col gap-5 px-12 max-w-[1920px]"
+    >
       <header class="w-full">
         <h2 class="text-[32px] font-semibold">Nosotros</h2>
       </header>
 
       <footer class="w-full grid grid-cols-auto-12 gap-5">
-        <picture class="w-full h-80 col-span-8 relative flex items-end">
+        <a href="" class="w-full h-80 col-span-8 relative flex items-end">
           <img
             class="w-full h-full object-cover brightness-[.4]"
             src="/assets/img/Obrero.webp"
@@ -125,10 +132,14 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
             title="Imagen de Obrero"
             alt="Imagen de Obrero"
           />
-          <h3 class="py-5 px-6 absolute text-2xl font-semibold">
-            Sobre nuestra empresa
-          </h3>
-        </picture>
+
+          <div
+            class="w-full py-5 px-6 absolute flex justify-between items-center"
+          >
+            <h3 class="text-2xl font-semibold">Sobre nuestra empresa</h3>
+            <IconOpen class="w-7" />
+          </div>
+        </a>
 
         <CardInfo
           header="Convertimos tus ideas en realidad con un enfoque innovador y una calidad insuperable."
@@ -138,7 +149,10 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
       </footer>
     </section>
 
-    <section class="w-full h-full flex flex-col gap-5 px-12 max-w-[1920px]">
+    <section
+      id="machines"
+      class="w-full h-full flex flex-col gap-5 px-12 max-w-[1920px]"
+    >
       <header class="w-full">
         <h2 class="text-[32px] font-semibold">Maquinaria</h2>
       </header>
@@ -149,8 +163,8 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
             class="w-full h-full object-cover brightness-[.7]"
             src="/assets/img/Proyectadora.webp"
             loading="lazy"
-            title="Imagen de Obrero"
-            alt="Imagen de Obrero"
+            title="Maquina Proyectadora"
+            alt="Imagen de Maquina Proyectadora"
           />
           <h3 class="py-5 px-6 absolute text-2xl font-semibold">
             Maquina Proyectadora
@@ -162,8 +176,8 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
             class="w-full h-full object-cover brightness-[.7]"
             src="/assets/img/Hormigonera.webp"
             loading="lazy"
-            title="Imagen de Obrero"
-            alt="Imagen de Obrero"
+            title="Hormigonera"
+            alt="Imagen de Hormigonera"
           />
           <h3 class="py-5 px-6 absolute text-2xl font-semibold">Hormigonera</h3>
         </picture>
@@ -183,13 +197,16 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
       </footer>
     </section>
 
-    <section class="w-full h-full flex flex-col gap-5 px-12 max-w-[1920px]">
+    <section
+      id="contact"
+      class="w-full h-full flex flex-col gap-5 px-12 max-w-[1920px]"
+    >
       <header class="w-full">
         <h2 class="text-[32px] font-semibold">Contáctanos</h2>
       </header>
 
       <footer class="w-full grid grid-cols-auto-12 gap-5">
-        <picture class="w-full h-80 col-span-8 relative flex items-end">
+        <a href="" class="w-full h-80 col-span-8 relative flex items-end">
           <img
             class="w-full h-full object-cover brightness-[.4]"
             src="/assets/img/Planos.webp"
@@ -197,10 +214,13 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
             title="Plano de Obra"
             alt="Imagen de Plano de Obra"
           />
-          <h3 class="py-5 px-6 absolute text-2xl font-semibold">
-            Cotizamos tu presupuesto
-          </h3>
-        </picture>
+          <div
+            class="w-full py-5 px-6 absolute flex justify-between items-center"
+          >
+            <h3 class="text-2xl font-semibold">Cotizamos tu presupuesto</h3>
+            <IconOpen class="w-7" />
+          </div>
+        </a>
 
         <CardInfo
           header="Contáctanos hoy para recibir un presupuesto personalizado."
@@ -252,7 +272,7 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
               aria-label="WhatsApp"><IconWhatsApp class="w-5" /></a
             >
           </nav>
-          <a href="#Inicio" class="text-base w-full h-full flex items-center"
+          <a href="#inicio" class="text-base w-full h-full flex items-center"
             >Volver al inicio <IconArrowUp class="w-6 mt-[2px]" />
           </a>
         </header>
