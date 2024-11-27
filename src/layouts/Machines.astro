@@ -1,0 +1,23 @@
+---
+import CardMachine from "../components/CardMachine.astro"
+
+import ImageMachineOne from "../../public/assets/img/Proyectadora.webp"
+import ImageMachineTwo from "../../public/assets/img/Hormigonera.webp"
+import ImageMachineThree from "../../public/assets/img/Circular.webp"
+---
+<section
+  id="maquinaria"
+  class="w-full h-full flex flex-col gap-5 px-12 max-w-[1920px]"
+>
+  <header class="w-full">
+    <h2 class="text-[32px] font-semibold">Maquinaria</h2>
+  </header>
+
+  <footer class="w-full grid grid-cols-auto-12 gap-5">
+    <CardMachine src={ImageMachineOne} class="col-span-12" name="Máquina Proyectadora"/>
+
+    <CardMachine src={ImageMachineTwo} class="col-span-6" name="Hormigoneras"/>
+
+    <CardMachine src={ImageMachineThree} class="col-span-6" name="Circular de Mano"/>
+  </footer>
+</section>

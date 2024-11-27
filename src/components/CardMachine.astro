@@ -1,0 +1,16 @@
+---
+import Image from "astro/components/Image.astro";
+const { name, src } = Astro.props;
+---
+
+<picture class=`${Astro.props.class} w-full h-80 relative flex items-end overflow-hidden`>
+  <Image
+    class="w-full h-full object-cover brightness-[.6]"
+    src={src}
+    title={name}
+    alt={name}
+  />
+  <h3 class="py-5 px-6 absolute text-2xl font-semibold">
+    {name}
+  </h3>
+</picture>

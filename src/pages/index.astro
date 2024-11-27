@@ -1,293 +1,34 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import LogoLight from "../../public/assets/svg/LogoLight.astro";
-import CardServices from "../components/CardServices.astro";
-import CardData from "../components/CardData.astro";
-import CardInfo from "../components/CardInfo.astro";
-import IconMail from "../../public/assets/svg/IconMail.astro";
-import IconPhone from "../../public/assets/svg/IconPhone.astro";
-import IconArrowUp from "../../public/assets/svg/IconArrowUp.astro";
-import IconFacebook from "../../public/assets/svg/IconFacebook.astro";
-import IconInstagram from "../../public/assets/svg/IconInstagram.astro";
-import IconLinkedin from "../../public/assets/svg/IconLinkedin.astro";
-import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
-import IconOpen from "../../public/assets/svg/IconOpen.astro";
+import NavBar from "../components/NavBar.astro";
+import HeroSection from "../layouts/HeroSection.astro";
+import Services from "../layouts/Services.astro";
+import Banner from "../layouts/Banner.astro";
+import Us from "../layouts/Us.astro";
+import Machines from "../layouts/Machines.astro";
+import Contact from "../layouts/Contact.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="LZC - Empresa Constructora">
-  <header class="w-full flex justify-center fixed z-10">
-    <nav
-      class="w-full max-w-[1920px] px-12 py-4 flex justify-center items-center gap-16 text-lg"
-    >
-      <a href="#services" title="Servicios">Servicios</a>
-      <a href="#us" title="Nosotros">Nosotros</a>
-      <a aria-label="Logo LZC" title="Logo LZC" href="/">
-        <LogoLight class="w-40" />
-      </a>
-      <a href="#machines" title="Maquinaria">Maquinaria</a>
-      <a href="#contact" title="Contacto">Contacto</a>
-    </nav>
-  </header>
+  <NavBar />
 
   <main
     id="inicio"
     class="w-full h-full flex flex-col gap-16 items-center justify-center"
   >
-    <section
-      class="w-full h-[860px] bg-[url('/assets/img/hero-image.webp')] bg-no-repeat bg-cover bg-center relative"
-    >
-      <header
-        class="w-full h-full flex justify-center absolute backdrop-brightness-50"
-      >
-        <footer
-          class="w-full h-full max-w-[1920px] px-12 py-20 flex justify-end flex-col gap-5"
-        >
-          <h1 class="text-5xl font-semibold">
-            Creando Espacios, Construyendo Confianza
-          </h1>
-          <p class="text-xl w-[120ch] max-w-full text-pretty">
-            Convertimos tus ideas en realidad con un enfoque innovador y una
-            calidad insuperable. Contamos con años de experiencia, te ofrecemos
-            un servicio personalizado y sin complicaciones para asegurar el
-            éxito de cada proyecto.
-          </p>
-        </footer>
-      </header>
-    </section>
+    <HeroSection />
 
-    <section
-      id="services"
-      class="w-full h-full flex flex-col gap-5 px-12 max-w-[1920px]"
-    >
-      <header class="w-full">
-        <h2 class="text-[32px] font-semibold">Servicios</h2>
-      </header>
-      <footer class="w-full grid grid-cols-auto-services gap-5">
-        <CardServices
-          nameCard="Albañilería"
-          href="/"
-          class="bg-[url('/assets/img/Albañilería.webp')]"
-          title="Albañilería"
-        />
-        <CardServices
-          nameCard="Electricidad"
-          href="/"
-          class="bg-[url('/assets/img/Electricidad.webp')]"
-          title="Electricidad"
-        />
-        <CardServices
-          nameCard="Pinturería"
-          href="/"
-          class="bg-[url('/assets/img/Pinturería.webp')]"
-          title="Pinturería"
-        />
-        <CardServices
-          nameCard="Plomería"
-          href="/"
-          class="bg-[url('/assets/img/Plomería.webp')]"
-          title="Plomería"
-        />
-        <CardServices
-          nameCard="Yesería"
-          href="/"
-          class="bg-[url('/assets/img/Yesería.webp')]"
-          title="Yesería"
-        />
-        <CardServices
-          nameCard="Durlock"
-          href="/"
-          class="bg-[url('/assets/img/Durlock.webp')]"
-          title="Durlock"
-        />
-      </footer>
-    </section>
+    <Services />
 
-    <section
-      class="w-full flex justify-center h-72 bg-[url('/assets/img/Arquitectura.webp')] bg-cover bg-no-repeat bg-center"
-    >
-      <header
-        class="w-full max-w-[1920px] h-full grid place-content-center grid-cols-auto-data backdrop-brightness-[.65] px-12"
-      >
-        <CardData number="+10" text="Años de experiencia" />
-        <CardData number="+10" text="Años de experiencia" />
-        <CardData number="+10" text="Años de experiencia" />
-        <CardData number="+10" text="Años de experiencia" />
-      </header>
-    </section>
+    <Banner />
 
-    <section
-      id="us"
-      class="w-full h-full flex flex-col gap-5 px-12 max-w-[1920px]"
-    >
-      <header class="w-full">
-        <h2 class="text-[32px] font-semibold">Nosotros</h2>
-      </header>
+    <Us />
 
-      <footer class="w-full grid grid-cols-auto-12 gap-5">
-        <a href="" class="w-full h-80 col-span-8 relative flex items-end">
-          <img
-            class="w-full h-full object-cover brightness-[.4]"
-            src="/assets/img/Obrero.webp"
-            loading="lazy"
-            title="Imagen de Obrero"
-            alt="Imagen de Obrero"
-          />
+    <Machines />
 
-          <div
-            class="w-full py-5 px-6 absolute flex justify-between items-center"
-          >
-            <h3 class="text-2xl font-semibold">Sobre nuestra empresa</h3>
-            <IconOpen class="w-7" />
-          </div>
-        </a>
+    <Contact/>
 
-        <CardInfo
-          header="Convertimos tus ideas en realidad con un enfoque innovador y una calidad insuperable."
-          body=" Contamos con años de experiencia, te ofrecemos un servicio personalizado y sin complicaciones para asegurar el éxito."
-          footer="LZC - Construcciones en general"
-        />
-      </footer>
-    </section>
-
-    <section
-      id="machines"
-      class="w-full h-full flex flex-col gap-5 px-12 max-w-[1920px]"
-    >
-      <header class="w-full">
-        <h2 class="text-[32px] font-semibold">Maquinaria</h2>
-      </header>
-
-      <footer class="w-full grid grid-cols-auto-12 gap-5">
-        <picture class="w-full h-80 col-span-12 relative flex items-end">
-          <img
-            class="w-full h-full object-cover brightness-[.7]"
-            src="/assets/img/Proyectadora.webp"
-            loading="lazy"
-            title="Maquina Proyectadora"
-            alt="Imagen de Maquina Proyectadora"
-          />
-          <h3 class="py-5 px-6 absolute text-2xl font-semibold">
-            Maquina Proyectadora
-          </h3>
-        </picture>
-
-        <picture class="w-full h-80 col-span-6 relative flex items-end">
-          <img
-            class="w-full h-full object-cover brightness-[.7]"
-            src="/assets/img/Hormigonera.webp"
-            loading="lazy"
-            title="Hormigonera"
-            alt="Imagen de Hormigonera"
-          />
-          <h3 class="py-5 px-6 absolute text-2xl font-semibold">Hormigonera</h3>
-        </picture>
-
-        <picture class="w-full h-80 col-span-6 relative flex items-end">
-          <img
-            class="w-full h-full object-cover brightness-[.7]"
-            src="/assets/img/Obrero.webp"
-            loading="lazy"
-            title="Imagen de Obrero"
-            alt="Imagen de Obrero"
-          />
-          <h3 class="py-5 px-6 absolute text-2xl font-semibold">
-            Sobre nuestra empresa
-          </h3>
-        </picture>
-      </footer>
-    </section>
-
-    <section
-      id="contact"
-      class="w-full h-full flex flex-col gap-5 px-12 max-w-[1920px]"
-    >
-      <header class="w-full">
-        <h2 class="text-[32px] font-semibold">Contáctanos</h2>
-      </header>
-
-      <footer class="w-full grid grid-cols-auto-12 gap-5">
-        <a href="" class="w-full h-80 col-span-8 relative flex items-end">
-          <img
-            class="w-full h-full object-cover brightness-[.4]"
-            src="/assets/img/Planos.webp"
-            loading="lazy"
-            title="Plano de Obra"
-            alt="Imagen de Plano de Obra"
-          />
-          <div
-            class="w-full py-5 px-6 absolute flex justify-between items-center"
-          >
-            <h3 class="text-2xl font-semibold">Cotizamos tu presupuesto</h3>
-            <IconOpen class="w-7" />
-          </div>
-        </a>
-
-        <CardInfo
-          header="Contáctanos hoy para recibir un presupuesto personalizado."
-          body="Empieza a construir tus sueños con la calidad y precisión que mereces."
-          footer="Director - Limber Zerda"
-        >
-          <slot slot="contact">
-            <span class="flex items-center gap-1 mt-2 mb-1 leading-normal">
-              <IconMail class="w-5" /> construccionesenyeseria.limber@gmail.com</span
-            >
-            <span class="flex items-center gap-1 leading-normal">
-              <IconPhone class="w-5" /> +54 9 11 5924-9503</span
-            >
-          </slot>
-        </CardInfo>
-      </footer>
-    </section>
-
-    <footer
-      class="w-full h-40 flex justify-between items-center gap-5 px-12 max-w-[1920px]"
-    >
-      <picture class="flex items-center">
-        <LogoLight class="w-40" />
-      </picture>
-
-      <div class="flex flex-col gap-6">
-        <header class="flex items-center gap-14">
-          <nav class="flex gap-7">
-            <a
-              class="w-10 h-10 bg-[#323232] rounded-full flex justify-center items-center"
-              href="/"
-              aria-label="Instagram"
-            >
-              <IconInstagram class="w-5" />
-            </a>
-            <a
-              class="w-10 h-10 bg-[#323232] rounded-full flex justify-center items-center"
-              href="/"
-              aria-label="Linkedin"><IconLinkedin class="w-5" /></a
-            >
-            <a
-              class="w-10 h-10 bg-[#323232] rounded-full flex justify-center items-center"
-              href="/"
-              aria-label="Facebook"><IconFacebook class="w-5" /></a
-            >
-            <a
-              class="w-10 h-10 bg-[#323232] rounded-full flex justify-center items-center"
-              href="/"
-              aria-label="WhatsApp"><IconWhatsApp class="w-5" /></a
-            >
-          </nav>
-          <a href="#inicio" class="text-base w-full h-full flex items-center"
-            >Volver al inicio <IconArrowUp class="w-6 mt-[2px]" />
-          </a>
-        </header>
-        <footer>
-          <p class="text-[#B0B0B0]">
-            Desarrollado por <a
-              class="text-white"
-              target="_blank"
-              title="Contactar via Linkedin"
-              href="https://www.linkedin.com/in/sebastian-perezz/"
-              >Sebastian Perez</a
-            > - Todos los derechos reservados
-          </p>
-        </footer>
-      </div>
-    </footer>
+    <Footer/>
   </main>
 </Layout>

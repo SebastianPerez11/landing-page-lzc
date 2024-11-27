@@ -1,0 +1,65 @@
+---
+import CardServices from "../components/CardServices.astro";
+import AlbañileriaImg from "../../public/assets/img/Albañilería.webp";
+import ElectricidadImg from "../../public/assets/img/Electricidad.webp";
+import PintureriaImg from "../../public/assets/img/Pinturería.webp";
+import PlomeriaImg from "../../public/assets/img/Plomería.webp";
+import YeseriaImg from "../../public/assets/img/Yesería.webp";
+import DurlockImg from "../../public/assets/img/Durlock.webp";
+
+import AlbañileriaImgSm from "../../public/assets/img/small/Albañilería.webp";
+import ElectricidadImgSm from "../../public/assets/img/small/Electricidad.webp";
+import PintureriaImgSm from "../../public/assets/img/small/Pinturería.webp";
+import PlomeriaImgSm from "../../public/assets/img/small/Plomería.webp";
+import YeseriaImgSm from "../../public/assets/img/small/Yesería.webp";
+import DurlockImgSm from "../../public/assets/img/small/Durlock.webp";
+---
+
+<section
+  id="servicios"
+  class="w-full h-full flex flex-col gap-5 px-12 max-w-[1920px]"
+>
+  <header class="w-full">
+    <h2 class="text-[32px] font-semibold">Servicios</h2>
+  </header>
+  <footer class="w-full grid grid-cols-auto-services gap-5">
+    <CardServices
+      nameCard="Albañilería"
+      href="/"
+      src={AlbañileriaImgSm}
+      title="Albañilería"
+      loading="eager"
+    />
+    <CardServices
+      nameCard="Electricidad"
+      href="/"
+      src={ElectricidadImgSm}
+      title="Electricidad"
+      loading="eager"
+    />
+    <CardServices
+      nameCard="Pinturería"
+      href="/"
+      src={PintureriaImgSm}
+      title="Pinturería"
+    />
+    <CardServices
+      nameCard="Plomería"
+      href="/"
+      src={PlomeriaImgSm}
+      title="Plomería"
+    />
+    <CardServices
+      nameCard="Yesería"
+      href="/"
+      src={YeseriaImgSm}
+      title="Yesería"
+    />
+    <CardServices
+      nameCard="Durlock"
+      href="/"
+      src={DurlockImgSm}
+      title="Durlock"
+    />
+  </footer>
+</section>

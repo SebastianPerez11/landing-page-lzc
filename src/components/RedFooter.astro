@@ -1,0 +1,12 @@
+---
+const { label, href } = Astro.props;
+---
+
+<a
+  class="w-10 h-10 bg-[#323232] rounded-full flex justify-center items-center hover:scale-105 transition-transform"
+  href={href}
+  aria-label={label}
+  title={label}
+>
+  <slot slot="icon" />
+</a>

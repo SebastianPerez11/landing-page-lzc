@@ -1,0 +1,19 @@
+---
+import LogoLight from "../../public/assets/svg/LogoLight.astro";
+
+import LinkNavBar from "../components/LinkNavBar.astro";
+---
+
+<header class="w-full flex justify-center fixed z-10 backdrop-blur-sm">
+  <nav
+    class="w-full max-w-[1920px] px-12 py-4 flex justify-center items-center text-lg gap-12"
+  >
+    <LinkNavBar href="#servicios" name="Servicios" />
+    <LinkNavBar href="#nosotros" name="Nosotros" />
+    <a aria-label="Logo LZC" title="Logo LZC" href="/" class="">
+      <LogoLight class="w-40" />
+    </a>
+    <LinkNavBar href="#maquinaria" name="Maquinaria" />
+    <LinkNavBar href="#contacto" name="Contacto" />
+  </nav>
+</header>
