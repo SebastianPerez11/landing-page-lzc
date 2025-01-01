@@ -1,7 +1,10 @@
 ---
 const {number, text} = Astro.props;
+import IconCheck from "../../public/assets/svg/IconCheck.astro";
 ---
-<span class="text-[34.5px] flex flex-col items-center justify-center font-semibold">
-  {number}
-  <span class="text-xl font-normal">{text}</span>
-</span>
+
+<li class="flex flex-col items-center justify-center h-[250px] bg-[#262626]">
+  <span class="text-[44px] max-sm:text-[40px] font-bold">{number}</span>
+  <h3 class="text-lg font-medium">{text}</h3>
+  <IconCheck class="w-8 mt-3"/>
+</li>

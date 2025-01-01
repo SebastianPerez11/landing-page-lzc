@@ -10,15 +10,15 @@ import RedFooter from "./RedFooter.astro";
 ---
 
 <footer
-  class="w-full h-40 flex justify-between items-center gap-5 px-12 max-w-[1920px]"
+  class="w-full h-40 max-sm:h-max max-sm:flex-col flex justify-between items-center gap-5 px-12 pb-6 max-sm:px-4 max-w-[1920px]"
 >
   <picture class="flex items-center">
     <LogoLight class="w-40" />
   </picture>
 
   <div class="flex flex-col gap-6">
-    <header class="flex items-center gap-14">
-      <nav class="flex gap-7">
+    <header class="flex items-center gap-14 max-md:flex-col"/>
+      <nav class="flex gap-7 max-sm:gap-3">
         <RedFooter href="" label="Instagram">
           <slot name="icon">
             <IconInstagram class="w-5" />

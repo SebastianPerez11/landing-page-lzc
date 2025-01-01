@@ -1,5 +1,8 @@
 ---
+import ContainSection from "../components/ContainSection.astro";
 import CardServices from "../components/CardServices.astro";
+import TitleSection from "../components/TitleSection.astro";
+
 import AlbañileriaImg from "../../public/assets/img/Albañilería.webp";
 import ElectricidadImg from "../../public/assets/img/Electricidad.webp";
 import PintureriaImg from "../../public/assets/img/Pinturería.webp";
@@ -15,14 +18,12 @@ import YeseriaImgSm from "../../public/assets/img/Small/Yesería.webp";
 import DurlockImgSm from "../../public/assets/img/Small/Durlock.webp";
 ---
 
-<section
-  id="servicios"
-  class="w-full h-full flex flex-col gap-5 px-12 max-w-[1920px]"
->
-  <header class="w-full">
-    <h2 class="text-[32px] font-semibold">Servicios</h2>
-  </header>
-  <footer class="w-full grid grid-cols-auto-services gap-5">
+<ContainSection id="servicios">
+  <TitleSection title="Servicios" />
+
+  <footer
+    class="w-full grid grid-cols-auto-services max-sm:grid-cols-auto-services-mb gap-5"
+  >
     <CardServices
       nameCard="Albañilería"
       href="/"
@@ -62,4 +63,6 @@ import DurlockImgSm from "../../public/assets/img/Small/Durlock.webp";
       title="Durlock"
     />
   </footer>
-</section>
+
+  <ContainSection />
+</ContainSection>

@@ -5,6 +5,7 @@ import HeroSection from "../layouts/HeroSection.astro";
 import Services from "../layouts/Services.astro";
 import Banner from "../layouts/Banner.astro";
 import Us from "../layouts/Us.astro";
+import Data from "../layouts/Data.astro";
 import Machines from "../layouts/Machines.astro";
 import Contact from "../layouts/Contact.astro";
 import Footer from "../components/Footer.astro";
@@ -15,7 +16,7 @@ import Footer from "../components/Footer.astro";
 
   <main
     id="inicio"
-    class="w-full h-full flex flex-col gap-16 items-center justify-center"
+    class="w-full h-full flex flex-col gap-16 max-sm:gap-6 items-center justify-center"
   >
     <HeroSection />
 
@@ -24,6 +25,8 @@ import Footer from "../components/Footer.astro";
     <Banner />
 
     <Us />
+
+    <Data/>
 
     <Machines />
 

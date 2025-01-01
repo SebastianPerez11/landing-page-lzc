@@ -2,20 +2,17 @@
 import CardInfo from "../components/CardInfo.astro";
 import Image from "astro/components/Image.astro";
 import ObreroImage from "../../public/assets/img/Obrero.webp";
+import TitleSection from "../components/TitleSection.astro";
+import ContainSection from "../components/ContainSection.astro";
 ---
 
-<section
-  id="nosotros"
-  class="w-full h-full flex flex-col gap-5 px-12 max-w-[1920px]"
->
-  <header class="w-full">
-    <h2 class="text-[32px] font-semibold">Nosotros</h2>
-  </header>
+<ContainSection id="nosotros">
+  <TitleSection title="Nosotros" />
 
   <footer class="w-full grid grid-cols-auto-12 gap-5">
     <a
       href="/"
-      class="w-full h-80 col-span-8 relative flex items-end overflow-hidden"
+      class="w-full h-80 col-span-8 lg:col-span-6 md:col-span-full max-md:col-span-full relative flex items-end overflow-hidden"
     >
       <Image
         src={ObreroImage}
@@ -25,9 +22,9 @@ import ObreroImage from "../../public/assets/img/Obrero.webp";
       />
 
       <div
-        class="pointer-events-none w-full py-5 px-6 absolute flex justify-between items-center"
+        class="pointer-events-none w-full py-5 px-6 max-sm:px-3 absolute flex justify-between items-center"
       >
-        <h3 class="text-2xl font-semibold">Sobre nuestra empresa</h3>
+        <h3 class="text-2xl max-sm:text-xl font-semibold">Sobre nuestra empresa</h3>
       </div>
     </a>
 
@@ -37,4 +34,4 @@ import ObreroImage from "../../public/assets/img/Obrero.webp";
       footer="LZC - Construcciones en general"
     />
   </footer>
-</section>
+</ContainSection>

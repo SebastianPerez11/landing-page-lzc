@@ -1,31 +1,30 @@
 ---
 import CardInfo from "../components/CardInfo.astro";
 import IconOpen from "../../public/assets/svg/IconOpen.astro";
-import IconMail from "../../public/assets/svg/IconMail.astro";
-import IconPhone from "../../public/assets/svg/IconPhone.astro";
+import TitleSection from "../components/TitleSection.astro";
 
 import Image from "astro/components/Image.astro";
 import MapsImage from "../../public/assets/img/Planos.webp";
+import ContainSection from "../components/ContainSection.astro";
 ---
 
-<section
-  id="contacto"
-  class="w-full h-full flex flex-col gap-5 px-12 max-w-[1920px]"
->
-  <header class="w-full">
-    <h2 class="text-[32px] font-semibold">Contáctanos</h2>
-  </header>
-
+<ContainSection id="contacto">
+  <TitleSection title="Contáctanos" />
   <footer class="w-full grid grid-cols-auto-12 gap-5">
-    <a href="/" class="w-full h-80 col-span-8 relative flex items-end overflow-hidden">
+    <a
+      href="/"
+      class="w-full h-80 col-span-8 lg:col-span-6 md:col-span-full max-md:col-span-full relative flex items-end overflow-hidden"
+    >
       <Image
         src={MapsImage}
         class="w-full h-full object-cover brightness-[.5] hover:scale-105 transition-transform"
         title="Plano de Obra"
         alt="Imagen de Plano de Obra"
       />
-      <div class="w-full py-5 px-6 absolute flex justify-between items-center pointer-events-none">
-        <h3 class="text-2xl font-semibold">Cotizamos tu presupuesto</h3>
+      <div
+        class="w-full py-5 px-6 max-sm:px-3 absolute flex justify-between items-center pointer-events-none"
+      >
+        <h3 class="text-2xl max-sm:text-xl font-semibold">Cotizamos tu presupuesto</h3>
         <IconOpen class="w-7" />
       </div>
     </a>
@@ -36,13 +35,11 @@ import MapsImage from "../../public/assets/img/Planos.webp";
       footer="Director - Limber Zerda"
     >
       <slot slot="contact">
-        <span class="flex items-center gap-1 mt-2 mb-1 leading-normal">
-          <IconMail class="w-5" /> construccionesenyeseria.limber@gmail.com</span
+        <span class="mt-2 mb-1 leading-normal max-sm:text-base">
+          construccionesenyeseria.limber@gmail.com</span
         >
-        <span class="flex items-center gap-1 leading-normal">
-          <IconPhone class="w-5" /> +54 9 11 5924-9503</span
-        >
+        <span class="leading-normal max-sm:text-base"> +54 9 11 5924-9503</span>
       </slot>
     </CardInfo>
   </footer>
-</section>
+</ContainSection>
