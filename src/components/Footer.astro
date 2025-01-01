@@ -17,46 +17,48 @@ import RedFooter from "./RedFooter.astro";
   </picture>
 
   <div class="flex flex-col gap-6">
-    <header class="flex items-center gap-14 max-md:flex-col"/>
-      <nav class="flex gap-7 max-sm:gap-3">
-        <RedFooter href="" label="Instagram">
-          <slot name="icon">
-            <IconInstagram class="w-5" />
-          </slot>
-        </RedFooter>
+    <header class="flex items-center gap-14 max-md:flex-col"></header>
+    <nav class="flex gap-7 max-sm:gap-3">
+      <RedFooter href="" label="Instagram">
+        <slot name="icon">
+          <IconInstagram class="w-5" />
+        </slot>
+      </RedFooter>
 
-        <RedFooter href="" label="Linkedin">
-          <slot name="icon">
-            <IconLinkedin class="w-5" />
-          </slot>
-        </RedFooter>
+      <RedFooter href="" label="Linkedin">
+        <slot name="icon">
+          <IconLinkedin class="w-5" />
+        </slot>
+      </RedFooter>
 
-        <RedFooter href="" label="Facebook">
-          <slot name="icon">
-            <IconFacebook class="w-5" />
-          </slot>
-        </RedFooter>
+      <RedFooter href="" label="Facebook">
+        <slot name="icon">
+          <IconFacebook class="w-5" />
+        </slot>
+      </RedFooter>
 
-        <RedFooter href="" label="WhatsApp">
-          <slot name="icon">
-            <IconWhatsApp class="w-5" />
-          </slot>
-        </RedFooter>
-      </nav>
-      <a href="#inicio" class="text-base w-full h-full flex items-center group hover:text-gray-300 transition-colors"
-        >Volver al inicio <IconArrowUp class="w-6 mt-[2px] group-hover:fill-gray-300 fill-white transition-colors" />
-      </a>
-    </header>
-    <footer>
-      <p class="text-[#D1D1D1]">
-        Desarrollado por <a
-          class="text-white"
-          target="_blank"
-          title="Contactar via Linkedin"
-          href="https://www.linkedin.com/in/sebastian-perezz/"
-          >Sebastian Perez</a
-        > - Todos los derechos reservados
-      </p>
-    </footer>
+      <RedFooter href="" label="WhatsApp">
+        <slot name="icon">
+          <IconWhatsApp class="w-5" />
+        </slot>
+      </RedFooter>
+    </nav>
+    <a
+      href="#inicio"
+      class="text-base w-full h-full flex items-center group hover:text-gray-300 transition-colors"
+      >Volver al inicio <IconArrowUp
+        class="w-6 mt-[2px] group-hover:fill-gray-300 fill-white transition-colors"
+      />
+    </a>
   </div>
+  <footer>
+    <p class="text-[#D1D1D1]">
+      Desarrollado por <a
+        class="text-white"
+        target="_blank"
+        title="Contactar via Linkedin"
+        href="https://www.linkedin.com/in/sebastian-perezz/">Sebastian Perez</a
+      > - Todos los derechos reservados
+    </p>
+  </footer>
 </footer>
