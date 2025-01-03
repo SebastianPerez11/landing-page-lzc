@@ -14,7 +14,7 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
 
 <header class="w-full h-full flex justify-end items-start fixed z-10">
   <nav
-    class="w-full max-w-[1920px] px-12 py-3 flex justify-center items-center text-lg gap-10 max-md:hidden backdrop-blur-sm"
+    class="w-full max-w-[1920px] px-12 py-4 flex justify-center items-center text-lg gap-10 max-md:hidden backdrop-blur-sm"
   >
     <LinkNavBar href="#servicios" name="Servicios" />
     <LinkNavBar href="#nosotros" name="Nosotros" />
@@ -26,7 +26,7 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
   </nav>
 
   <nav
-    class="hidden w-full px-4 py-3 max-md:flex items-center justify-between text-lg z-20"
+    class="hidden w-full px-4 py-4 max-md:flex items-center justify-between text-lg z-20"
   >
     <a aria-label="Logo LZC" title="Logo LZC" href="/">
       <LogoLight class="w-28" />
@@ -42,7 +42,7 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
 
   <ul
     id="menuHidden"
-    class="w-[65%] hidden h-full absolute z-10 max-md:flex flex-col items-center justify-start px-4 pt-[75px] bg-[#262626] translate-x-full transition-transform"
+    class="w-[60%] hidden h-full absolute z-10 max-md:flex flex-col items-center justify-start px-4 pt-[75px] bg-[#262626] translate-x-full transition-transform"
   >
     <nav class="w-full flex flex-col gap-[14px] flex-grow">
       <LinkMenuMobile href="" name="Inicio" class="bg-white text-[#262626]" />
@@ -68,7 +68,7 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
       />
     </nav>
 
-    <footer class="flex gap-7 max-sm:gap-3 flex-grow-1 mb-4">
+    <footer class="w-full flex justify-between flex-grow-1 mb-4">
       <RedFooter href="" label="Instagram">
         <slot name="icon">
           <IconInstagram class="w-5" />
@@ -100,6 +100,7 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
   const iconClose = document.querySelector("#iconClose");
   const iconHamburger = document.querySelector("#iconHamburger");
   const menuHidden = document.querySelector("#menuHidden");
+  const body = document.querySelector("#body");
 
   console.log(iconHamburger);
 
@@ -109,6 +110,7 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
       iconHamburger.classList.add("opacity-0");
       iconClose.classList.add("opacity-100");
       iconClose.classList.remove("pointer-events-none");
+      body.classList.add("fixed");
     });
   };
 
@@ -118,6 +120,7 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
       iconHamburger.classList.remove("opacity-0");
       iconClose.classList.remove("opacity-100");
       iconClose.classList.add("pointer-events-none");
+      body.classList.remove("fixed");
     });
   };
 
