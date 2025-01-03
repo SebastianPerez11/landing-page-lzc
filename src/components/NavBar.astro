@@ -1,12 +1,20 @@
 ---
 import LogoLight from "../../public/assets/svg/LogoLight.astro";
-
+import IconHamburgerMenu from "../../public/assets/svg/IconHamburgerMenu.astro";
+import IconClose from "../../public/assets/svg/IconClose.astro";
 import LinkNavBar from "../components/LinkNavBar.astro";
+import LinkMenuMobile from "./LinkMenuMobile.astro";
+import RedFooter from "./RedFooter.astro";
+
+import IconFacebook from "../../public/assets/svg/IconFacebook.astro";
+import IconInstagram from "../../public/assets/svg/IconInstagram.astro";
+import IconLinkedin from "../../public/assets/svg/IconLinkedin.astro";
+import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
 ---
 
-<header class="w-full flex justify-center fixed z-10 backdrop-blur-sm max-md:hidden">
+<header class="w-full h-full flex justify-end items-start fixed z-10">
   <nav
-    class="w-full max-w-[1920px] px-12 py-3 flex justify-center items-center text-lg gap-10"
+    class="w-full max-w-[1920px] px-12 py-3 flex justify-center items-center text-lg gap-10 max-md:hidden backdrop-blur-sm"
   >
     <LinkNavBar href="#servicios" name="Servicios" />
     <LinkNavBar href="#nosotros" name="Nosotros" />
@@ -16,4 +24,103 @@ import LinkNavBar from "../components/LinkNavBar.astro";
     <LinkNavBar href="#maquinaria" name="Maquinaria" />
     <LinkNavBar href="#contacto" name="Contacto" />
   </nav>
+
+  <nav
+    class="hidden w-full px-4 py-3 max-md:flex items-center justify-between text-lg z-20"
+  >
+    <a aria-label="Logo LZC" title="Logo LZC" href="/">
+      <LogoLight class="w-28" />
+    </a>
+    <aside class="grid place-content-center">
+      <IconHamburgerMenu id="iconHamburger" class="w-10 block" />
+      <IconClose
+        id="iconClose"
+        class="w-10 absolute opacity-0 pointer-events-none"
+      />
+    </aside>
+  </nav>
+
+  <ul
+    id="menuHidden"
+    class="w-[65%] hidden h-full absolute z-10 max-md:flex flex-col items-center justify-start px-4 pt-[75px] bg-[#262626] translate-x-full transition-transform"
+  >
+    <nav class="w-full flex flex-col gap-[14px] flex-grow">
+      <LinkMenuMobile href="" name="Inicio" class="bg-white text-[#262626]" />
+      <LinkMenuMobile
+        href="#servicios"
+        name="Servicios"
+        class="bg-[#323232] text-white"
+      />
+      <LinkMenuMobile
+        href="#nosotros"
+        name="Nosotros"
+        class="bg-[#323232] text-white"
+      />
+      <LinkMenuMobile
+        href="#maquinaria"
+        name="Maquinaria"
+        class="bg-[#323232] text-white"
+      />
+      <LinkMenuMobile
+        href="#contacto"
+        name="Contacto"
+        class="bg-[#323232] text-white"
+      />
+    </nav>
+
+    <footer class="flex gap-7 max-sm:gap-3 flex-grow-1 mb-4">
+      <RedFooter href="" label="Instagram">
+        <slot name="icon">
+          <IconInstagram class="w-5" />
+        </slot>
+      </RedFooter>
+
+      <RedFooter href="" label="Linkedin">
+        <slot name="icon">
+          <IconLinkedin class="w-5" />
+        </slot>
+      </RedFooter>
+
+      <RedFooter href="" label="Facebook">
+        <slot name="icon">
+          <IconFacebook class="w-5" />
+        </slot>
+      </RedFooter>
+
+      <RedFooter href="" label="WhatsApp">
+        <slot name="icon">
+          <IconWhatsApp class="w-5" />
+        </slot>
+      </RedFooter>
+    </footer>
+  </ul>
 </header>
+
+<script>
+  const iconClose = document.querySelector("#iconClose");
+  const iconHamburger = document.querySelector("#iconHamburger");
+  const menuHidden = document.querySelector("#menuHidden");
+
+  console.log(iconHamburger);
+
+  const openMenu = () => {
+    iconHamburger.addEventListener("click", () => {
+      menuHidden.classList.remove("translate-x-full");
+      iconHamburger.classList.add("opacity-0");
+      iconClose.classList.add("opacity-100");
+      iconClose.classList.remove("pointer-events-none");
+    });
+  };
+
+  const closeMenu = () => {
+    iconClose.addEventListener("click", () => {
+      menuHidden.classList.add("translate-x-full");
+      iconHamburger.classList.remove("opacity-0");
+      iconClose.classList.remove("opacity-100");
+      iconClose.classList.add("pointer-events-none");
+    });
+  };
+
+  openMenu();
+  closeMenu();
+</script>

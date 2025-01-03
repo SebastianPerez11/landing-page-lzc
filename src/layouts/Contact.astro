@@ -13,7 +13,7 @@ import ContainSection from "../components/ContainSection.astro";
   <footer class="w-full grid grid-cols-auto-12 gap-5">
     <a
       href="/"
-      class="w-full h-80 col-span-8 lg:col-span-6 md:col-span-full max-md:col-span-full relative flex items-end overflow-hidden"
+      class="w-full h-80 xl:col-span-8 lg:col-span-6 md:col-span-full max-md:col-span-full relative flex items-end overflow-hidden"
     >
       <Image
         src={MapsImage}
@@ -24,7 +24,9 @@ import ContainSection from "../components/ContainSection.astro";
       <div
         class="w-full py-5 px-6 max-sm:px-3 absolute flex justify-between items-center pointer-events-none"
       >
-        <h3 class="text-2xl max-sm:text-xl font-semibold">Cotizamos tu presupuesto</h3>
+        <h3 class="text-2xl max-sm:text-xl font-semibold">
+          Cotizamos tu presupuesto
+        </h3>
         <IconOpen class="w-7" />
       </div>
     </a>
@@ -35,8 +37,9 @@ import ContainSection from "../components/ContainSection.astro";
       footer="Director - Limber Zerda"
     >
       <slot slot="contact" class="w-full">
-        <p class="mt-2 mb-1 overflow-x-auto leading-normal max-sm:text-base">construccionesenyeseria.limber@gmail.com</p
-        >
+        <p class="mt-2 mb-1 overflow-x-auto leading-normal max-sm:text-base">
+          construccionesenyeseria.limber@gmail.com
+        </p>
         <span class="leading-normal max-sm:text-base"> +54 9 11 5924-9503</span>
       </slot>
     </CardInfo>
