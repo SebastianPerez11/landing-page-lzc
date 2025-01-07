@@ -12,7 +12,7 @@ import IconLinkedin from "../../public/assets/svg/IconLinkedin.astro";
 import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
 ---
 
-<header class="w-full h-full flex justify-end items-start fixed z-10">
+<header class="w-full flex justify-center items-start fixed z-10">
   <nav
     class="w-full max-w-[1920px] px-12 py-4 flex justify-center items-center text-lg gap-10 max-md:hidden backdrop-blur-sm"
   >
@@ -25,8 +25,8 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
     <LinkNavBar href="#contacto" name="Contacto" />
   </nav>
 
-  <nav
-    class="hidden w-full px-4 py-4 max-md:flex items-center justify-between text-lg z-20"
+  <!-- <nav
+    class="hidden w-full h-screen px-4 py-6 max-md:flex items-start justify-between text-lg z-20"
   >
     <a aria-label="Logo LZC" title="Logo LZC" href="/">
       <LogoLight class="w-28" />
@@ -38,11 +38,11 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
         class="w-10 absolute opacity-0 pointer-events-none"
       />
     </aside>
-  </nav>
+  </nav> -->
 
   <ul
     id="menuHidden"
-    class="w-[60%] hidden h-full absolute z-10 max-md:flex flex-col items-center justify-start px-4 pt-[75px] bg-[#262626] translate-x-full transition-transform"
+    class="w-[100%] hidden h-full absolute z-10 max-md:flex flex-col items-center justify-start px-4 pt-28 bg-[#262626] translate-x-[100%] transition-transform"
   >
     <nav class="w-full flex flex-col gap-[14px] flex-grow">
       <LinkMenuMobile href="" name="Inicio" class="bg-white text-[#262626]" />
@@ -68,7 +68,7 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
       />
     </nav>
 
-    <footer class="w-full flex justify-between flex-grow-1 mb-4">
+    <footer class="w-full flex gap-6 justify-center flex-grow-1 mb-4">
       <RedFooter href="" label="Instagram">
         <slot name="icon">
           <IconInstagram class="w-5" />
@@ -102,11 +102,9 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
   const menuHidden = document.querySelector("#menuHidden");
   const body = document.querySelector("#body");
 
-  console.log(iconHamburger);
-
   const openMenu = () => {
     iconHamburger.addEventListener("click", () => {
-      menuHidden.classList.remove("translate-x-full");
+      menuHidden.classList.remove("translate-x-[100%]");
       iconHamburger.classList.add("opacity-0");
       iconClose.classList.add("opacity-100");
       iconClose.classList.remove("pointer-events-none");
@@ -116,7 +114,7 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
 
   const closeMenu = () => {
     iconClose.addEventListener("click", () => {
-      menuHidden.classList.add("translate-x-full");
+      menuHidden.classList.add("translate-x-[100%]");
       iconHamburger.classList.remove("opacity-0");
       iconClose.classList.remove("opacity-100");
       iconClose.classList.add("pointer-events-none");
@@ -124,6 +122,22 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
     });
   };
 
+  // Función para verificar el tamaño de la ventana y eliminar una clase
+  function resetWindow() {
+    const widthWindow = 764; // Define el ancho deseado en píxeles
+    const body = document.body;
+
+    if (window.innerWidth > widthWindow) {
+      body.classList.remove("fixed"); // Elimina la clase si el ancho es menor al deseado
+    }
+  }
+
+  // Escuchar el evento resize de la ventana
+  window.addEventListener("resize", resetWindow);
+
+  // Ejecutar la función una vez al cargar la página
+
   openMenu();
   closeMenu();
+  resetWindow();
 </script>
