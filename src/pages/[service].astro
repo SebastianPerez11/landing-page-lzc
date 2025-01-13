@@ -1,0 +1,83 @@
+---
+import Layout from "../layouts/Layout.astro";
+import NavBar from "../components/NavBar.astro";
+import Banner from "../layouts/Banner.astro";
+import Us from "../layouts/Us.astro";
+import HeroService from "../layouts/HeroService.astro";
+import Contact from "../layouts/Contact.astro";
+import Footer from "../components/Footer.astro";
+
+import CardInfoService from "../components/CardInfoService.astro";
+import Image from "astro/components/Image.astro";
+import ObreroImage from "../../public/assets/img/Obrero.webp";
+import TitleSectionBack from "../components/TitleSectionBack.astro";
+import ContainSection from "../components/ContainSection.astro";
+
+import { services } from "../data/service.js";
+import { map } from "astro:schema";
+
+export async function getStaticPaths() {
+  // Genera las rutas dinámicas usando el campo "id" de cada servicio
+  return services.map((service) => ({ params: { service: service.id } }));
+}
+
+const { service } = Astro.params;
+
+// Encuentra el servicio correspondiente al `service`
+const matchedService = services.find((s) => s.id === service);
+
+// Si no se encuentra el servicio, lanza un error o maneja el caso
+if (!matchedService) {
+  throw new Error(`No se encontró un servicio con el ID: ${service}`);
+}
+---
+
+<Layout title={matchedService.id}>
+  <NavBar />
+
+  <main
+    id="inicio"
+    class="w-full h-full flex flex-col gap-16 max-sm:gap-6 items-center justify-center"
+  >
+    <HeroService title={matchedService.title} img={matchedService.image} />
+
+    <ContainSection id="nosotros">
+      <TitleSectionBack title="Te ofrecemos" />
+
+      <footer class="w-full grid grid-cols-auto-12 gap-5">
+        <CardInfoService
+          title="Servicio de Albañilería Profesional"
+          body="Nos especializamos en ofrecer un servicio de alta calidad, adaptados a las necesidades de tu proyecto. Ya sea que busques construir desde cero, realizar remodelaciones o hacer reparaciones, nuestro equipo de expertos está listo para transformar tus ideas en realidad."
+          subtitle="¿Qué incluye nuestro servicio de albañilería?"
+        />
+        <a
+          href="/"
+          class="w-full h-96 xl:col-span-4 lg:col-span-6 md:col-span-full max-md:col-span-full relative flex items-end overflow-hidden"
+        >
+          <Image
+            src={ObreroImage}
+            title="Imagen de Obrero"
+            alt="Imagen de Obrero"
+            class="w-full h-full object-cover brightness-[.5] transition-transform hover:scale-105"
+          />
+
+          <div
+            class="pointer-events-none w-full py-5 px-6 max-sm:px-3 absolute flex justify-between items-center"
+          >
+            <h3 class="text-2xl max-sm:text-xl font-semibold">
+              Sobre nuestra empresa
+            </h3>
+          </div>
+        </a>
+      </footer>
+    </ContainSection>
+
+    <Banner />
+
+    <Us />
+
+    <Contact />
+
+    <Footer />
+  </main>
+</Layout>

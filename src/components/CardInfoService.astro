@@ -1,0 +1,39 @@
+---
+const { title, subtitle, body } = Astro.props;
+---
+
+<div
+  class="w-full h-full flex flex-col xl:col-span-8 lg:col-span-6 md:col-span-full max-md:col-span-full py-10 px-8 max-sm:px-3 bg-[#323232] bg-opacity-90 text-lg"
+>
+  <header class="flex flex-col gap-3 flex-grow max-sm:text-base">
+    <span class="font-semibold">
+      {title}
+    </span>
+    <p>
+      {body}
+    </p>
+  </header>
+  <footer class="flex flex-col gap-3 max-sm:text-base">
+    <span class="font-semibold">
+      {subtitle}
+    </span>
+    <ul class="flex flex-col gap-2">
+      <li>
+        Construcción de estructuras: Levantamiento de muros, cimientos, bardas y
+        techos, con acabados impecables.
+      </li>
+      <li>
+        Remodelaciones: Transformamos espacios existentes para que luzcan
+        modernos, funcionales y seguros.
+      </li>
+      <li>
+        Reparaciones: Solucionamos problemas como grietas, humedad o deterioro
+        en estructuras para garantizar su durabilidad.
+      </li>
+      <li>
+        Instalación de revestimientos: Colocación de pisos, azulejos, cerámicas
+        y acabados decorativos que mejoran el aspecto de cualquier espacio.
+      </li>
+    </ul>
+  </footer>
+</div>

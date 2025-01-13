@@ -45,7 +45,11 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
     class="w-[100%] hidden h-screen absolute z-10 max-md:flex flex-col items-center justify-start px-4 pt-28 bg-[#262626] translate-x-[100%] transition-transform"
   >
     <nav class="w-full flex flex-col gap-[14px] flex-grow">
-      <LinkMenuMobile href="" name="Inicio" class="bg-white text-[#262626]" />
+      <LinkMenuMobile
+        href="#inicio"
+        name="Inicio"
+        class="bg-white text-[#262626]"
+      />
       <LinkMenuMobile
         href="#servicios"
         name="Servicios"
@@ -122,6 +126,20 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
     });
   };
 
+  const linksMobile = document.querySelectorAll(".linksMobile");
+
+  const linkActive = () => {
+    linksMobile.forEach((link) => {
+      link.addEventListener("click", () => {
+        menuHidden.classList.add("translate-x-[100%]");
+        iconClose.classList.remove("opacity-100");
+        iconHamburger.classList.remove("opacity-0");
+        iconClose.classList.add("pointer-events-none");
+        body.classList.remove("fixed");
+      });
+    });
+  };
+
   // Función para verificar el tamaño de la ventana y eliminar una clase
   function resetWindow() {
     const widthWindow = 764; // Define el ancho deseado en píxeles
@@ -140,4 +158,5 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
   openMenu();
   closeMenu();
   resetWindow();
+  linkActive();
 </script>

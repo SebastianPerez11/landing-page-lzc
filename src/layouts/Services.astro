@@ -3,19 +3,7 @@ import ContainSection from "../components/ContainSection.astro";
 import CardServices from "../components/CardServices.astro";
 import TitleSection from "../components/TitleSection.astro";
 
-import AlbañileriaImg from "../../public/assets/img/Albañilería.webp";
-import ElectricidadImg from "../../public/assets/img/Electricidad.webp";
-import PintureriaImg from "../../public/assets/img/Pinturería.webp";
-import PlomeriaImg from "../../public/assets/img/Plomería.webp";
-import YeseriaImg from "../../public/assets/img/Yesería.webp";
-import DurlockImg from "../../public/assets/img/Durlock.webp";
-
-import AlbañileriaImgSm from "../../public/assets/img/Small/Albañilería.webp";
-import ElectricidadImgSm from "../../public/assets/img/Small/Electricidad.webp";
-import PintureriaImgSm from "../../public/assets/img/Small/Pinturería.webp";
-import PlomeriaImgSm from "../../public/assets/img/Small/Plomería.webp";
-import YeseriaImgSm from "../../public/assets/img/Small/Yesería.webp";
-import DurlockImgSm from "../../public/assets/img/Small/Durlock.webp";
+import { services } from "../data/service";
 ---
 
 <ContainSection id="servicios">
@@ -24,44 +12,17 @@ import DurlockImgSm from "../../public/assets/img/Small/Durlock.webp";
   <footer
     class="w-full grid grid-cols-auto-services max-sm:grid-cols-auto-services-mb gap-5"
   >
-    <CardServices
-      nameCard="Albañilería"
-      href="/"
-      src={AlbañileriaImgSm}
-      title="Albañilería"
-      loading="eager"
-    />
-    <CardServices
-      nameCard="Electricidad"
-      href="/"
-      src={ElectricidadImgSm}
-      title="Electricidad"
-      loading="eager"
-    />
-    <CardServices
-      nameCard="Pinturería"
-      href="/"
-      src={PintureriaImgSm}
-      title="Pinturería"
-    />
-    <CardServices
-      nameCard="Plomería"
-      href="/"
-      src={PlomeriaImgSm}
-      title="Plomería"
-    />
-    <CardServices
-      nameCard="Yesería"
-      href="/"
-      src={YeseriaImgSm}
-      title="Yesería"
-    />
-    <CardServices
-      nameCard="Durlock"
-      href="/"
-      src={DurlockImgSm}
-      title="Durlock"
-    />
+    {
+      services.map((service) => (
+        <CardServices
+          nameCard={service.title}
+          href={service.id}
+          title={service.title}
+          src={service.image}
+          loading="lazy"
+        />
+      ))
+    }
   </footer>
 
   <ContainSection />

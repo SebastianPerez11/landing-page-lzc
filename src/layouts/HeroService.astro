@@ -1,0 +1,18 @@
+---
+const { title, img } = Astro.props;
+---
+
+<section
+  class="w-full h-[500px] max-sm:h-[600px] bg-no-repeat bg-cover bg-center relative"
+  style={`background-image: url('${img}')`}
+>
+  <header
+    class="w-full h-full flex justify-center absolute backdrop-brightness-50"
+  >
+    <footer
+      class="w-full h-full max-w-[1920px] px-12 max-sm:px-4 py-6 max-sm:py-10 flex justify-end flex-col gap-5"
+    >
+      <h1 class="text-5xl max-sm:text-3xl font-semibold">{title}</h1>
+    </footer>
+  </header>
+</section>
