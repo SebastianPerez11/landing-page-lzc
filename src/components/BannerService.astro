@@ -1,15 +1,16 @@
 ---
-
+const { banner } = Astro.props;
 ---
 
 <section
   class="w-full max-w-[1920px] h-80 flex justify-center px-12 max-sm:px-4"
 >
   <header
-    class="w-full h-full bg-[url('/assets/img/Arquitectura.webp')] bg-cover bg-no-repeat bg-center"
+    class="w-full h-full bg-cover bg-no-repeat bg-center"
+    style={`background-image: url('${banner}')`}
   >
     <div
-      class="h-full w-full flex justify-center items-center flex-col backdrop-brightness-[.55] gap-3"
+      class="h-full w-full flex justify-center items-center flex-col backdrop-brightness-[.40] gap-3"
     >
       <h3 class="text-[26px] text-center max-sm:text-[22px] font-semibold">
         ¡Haz realidad tu proyecto hoy!

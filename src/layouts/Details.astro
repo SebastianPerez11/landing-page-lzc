@@ -1,0 +1,26 @@
+---
+import CardInfoService from "../components/CardInfoService.astro";
+import TitleSectionBack from "../components/TitleSectionBack.astro";
+import ContainSection from "../components/ContainSection.astro";
+
+const {imageBox} = Astro.props;
+---
+
+<ContainSection id="nosotros">
+  <TitleSectionBack title="Te ofrecemos" />
+
+  <footer class="w-full grid grid-cols-auto-12 gap-5">
+    <CardInfoService
+      title="Servicio de Albañilería Profesional"
+      body="Nos especializamos en ofrecer un servicio de alta calidad, adaptados a las necesidades de tu proyecto. Ya sea que busques construir desde cero, realizar remodelaciones o hacer reparaciones, nuestro equipo de expertos está listo para transformar tus ideas en realidad."
+      subtitle="¿Qué incluye nuestro servicio de albañilería?"
+    />
+
+    <img
+      src={imageBox}
+      title="Imagen de Obrero"
+      alt="Imagen de Obrero"
+      class="brightness-[.5] object-cover w-full h-96 xl:col-span-4 lg:col-span-6 md:col-span-full max-md:col-span-full relative flex items-end overflow-hidden"
+    />
+  </footer>
+</ContainSection>
