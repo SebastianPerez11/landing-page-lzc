@@ -16,12 +16,12 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
   <nav
     class="w-full max-w-[1920px] px-12 py-4 flex justify-center items-center text-lg gap-10 max-md:hidden backdrop-blur-sm"
   >
-    <LinkNavBar href="#servicios" name="Servicios" />
+    <LinkNavBar href="#teOfrecemos" name="Te ofrecemos" />
     <LinkNavBar href="#nosotros" name="Nosotros" />
     <a aria-label="Logo LZC" title="Logo LZC" href="/" class="">
       <LogoLight class="w-36" />
     </a>
-    <LinkNavBar href="#maquinaria" name="Maquinaria" />
+    <LinkNavBar href="#preguntasFrecuentes" name="Preguntas Frecuentes" />
     <LinkNavBar href="#contacto" name="Contacto" />
   </nav>
 
@@ -45,14 +45,10 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
     class="w-[100%] hidden h-dvh absolute z-10 max-md:flex flex-col items-center justify-start px-4 pt-28 bg-[#262626] translate-x-[100%] transition-transform"
   >
     <nav class="w-full flex flex-col gap-[14px] flex-grow">
+      <LinkMenuMobile href="/" name="Inicio" class="bg-white text-[#262626]" />
       <LinkMenuMobile
-        href="#inicio"
-        name="Inicio"
-        class="bg-white text-[#262626]"
-      />
-      <LinkMenuMobile
-        href="#servicios"
-        name="Servicios"
+        href="#teOfrecemos"
+        name="Te Ofrecemos"
         class="bg-[#323232] text-white"
       />
       <LinkMenuMobile
@@ -61,8 +57,8 @@ import IconWhatsApp from "../../public/assets/svg/IconWhatsApp.astro";
         class="bg-[#323232] text-white"
       />
       <LinkMenuMobile
-        href="#maquinaria"
-        name="Maquinaria"
+        href="#preguntasFrecuentes"
+        name="Preguntas Frecuentes"
         class="bg-[#323232] text-white"
       />
       <LinkMenuMobile

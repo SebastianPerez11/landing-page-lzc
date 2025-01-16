@@ -1,0 +1,21 @@
+---
+const { state } = Astro.props;
+
+import IconArrowUp from "../../public/assets/svg/IconArrowUp.astro";
+---
+
+<details open={state} class="group">
+  <summary class="bg-[#444444] text-[16.5px] max-sm:text-base max-sm:p-4 p-6 font-semibold list-none w-full flex justify-between items-center text-pretty"
+    >¿Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
+    repellendus!? <IconArrowUp class="w-8 max-sm:w-20 rotate-180 group-open:rotate-[360]"/> </summary
+  >
+  <p class="bg-[#262626] max-sm:p-4 p-6">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos
+    asperiores ullam unde placeat dolore! Omnis minus vitae fugit a, animi quos
+    est voluptatum vero eius earum deserunt, reiciendis cumque laboriosam
+    provident cupiditate distinctio. Explicabo maxime doloribus aliquid optio
+    expedita modi eveniet alias enim excepturi, consequatur dolore in corporis
+    deleniti numquam libero repudiandae sunt ipsam commodi odit dolorum sit
+    suscipit possimus.
+  </p>
+</details>

@@ -3,7 +3,7 @@ const { title, subtitle, body } = Astro.props;
 ---
 
 <div
-  class="w-full h-full flex flex-col xl:col-span-8 lg:col-span-6 md:col-span-full max-md:col-span-full py-10 px-8 max-sm:px-3 bg-[#323232] bg-opacity-90 text-lg"
+  class="w-full h-full flex flex-col xl:col-span-8 lg:col-span-6 md:col-span-full max-md:col-span-full py-10 px-8 max-sm:py-8 max-sm:px-3 bg-[#323232] bg-opacity-90 text-lg"
 >
   <header class="flex flex-col gap-3 flex-grow max-sm:text-base">
     <span class="font-semibold">
@@ -14,7 +14,7 @@ const { title, subtitle, body } = Astro.props;
     </p>
   </header>
   <footer class="flex flex-col gap-3 max-sm:text-base">
-    <span class="font-semibold">
+    <span class="font-semibold max-sm:mt-3">
       {subtitle}
     </span>
     <ul class="flex flex-col gap-2">

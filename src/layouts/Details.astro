@@ -6,7 +6,7 @@ import ContainSection from "../components/ContainSection.astro";
 const {imageBox} = Astro.props;
 ---
 
-<ContainSection id="nosotros">
+<ContainSection id="teOfrecemos">
   <TitleSectionBack title="Te ofrecemos" />
 
   <footer class="w-full grid grid-cols-auto-12 gap-5">
@@ -20,7 +20,7 @@ const {imageBox} = Astro.props;
       src={imageBox}
       title="Imagen de Obrero"
       alt="Imagen de Obrero"
-      class="brightness-[.5] object-cover w-full h-96 xl:col-span-4 lg:col-span-6 md:col-span-full max-md:col-span-full relative flex items-end overflow-hidden"
+      class="max-sm:h-[260px] brightness-[.5] object-cover w-full h-96 xl:col-span-4 lg:col-span-6 md:col-span-full max-md:col-span-full relative flex items-end overflow-hidden"
     />
   </footer>
 </ContainSection>

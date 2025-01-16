@@ -1,13 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import NavBar from "../components/NavBar.astro";
+import NavBarService from "../components/NavBarService.astro";
 import BannerService from "../components/BannerService.astro";
 import Questions from "../layouts/Questions.astro";
 import HeroService from "../layouts/HeroService.astro";
 import Contact from "../layouts/Contact.astro";
 import Footer from "../components/Footer.astro";
 import Details from "../layouts/Details.astro";
-
+import Us from "../layouts/Us.astro";
 import { services } from "../data/service.js";
 import { map } from "astro:schema";
 
@@ -28,11 +28,11 @@ if (!matchedService) {
 ---
 
 <Layout title={matchedService.id}>
-  <NavBar />
+  <NavBarService />
 
   <main
     id="inicio"
-    class="w-full h-full flex flex-col gap-16 max-sm:gap-6 items-center justify-center"
+    class="w-full h-full flex flex-col gap-20 max-sm:gap-10 items-center justify-center"
   >
     <HeroService title={matchedService.title} img={matchedService.image} />
 
@@ -40,7 +40,9 @@ if (!matchedService) {
 
     <BannerService banner={matchedService.banner} />
 
-    <Questions/>
+    <Us/>
+
+    <Questions />
 
     <Contact />
 
