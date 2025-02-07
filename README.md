@@ -2,7 +2,7 @@
 
 ### LZC Construcciones es una empresa de construccion en general mas de 15 años de experiencia por todo Buenos Aires.
 
-![logo-light](https://github.com/user-attachments/assets/29ee0805-a7c4-4aa3-92f4-193e342abb48)
+![Frame 4](https://github.com/user-attachments/assets/bd8997fd-f466-478a-91fd-ef985e63b243)
 
 ### Descripción general
 
