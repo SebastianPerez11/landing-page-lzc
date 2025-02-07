@@ -1,6 +1,6 @@
 export const services = [
   {
-    id: "Albañilería",
+    id: "Albañileria",
     title: "Albañilería",
     image: "/assets/img/Small/Albañilería.webp",
     banner: "/assets/img/Banner/AlbañileríaBanner.webp",
@@ -14,21 +14,21 @@ export const services = [
     box: "/assets/img/Box/ElectricidadBox.webp",
   },
   {
-    id: "Pinturería",
+    id: "Pintureria",
     title: "Pinturería",
     image: "/assets/img/Small/Pinturería.webp",
     banner: "/assets/img/Banner/PintureríaBanner.webp",
     box: "/assets/img/Box/PintureríaBox.webp",
   },
   {
-    id: "Plomería",
+    id: "Plomeria",
     title: "Plomería",
     image: "/assets/img/Small/Plomería.webp",
     banner: "/assets/img/Banner/PlomeríaBanner.webp",
     box: "/assets/img/Box/PlomeríaBox.webp",
   },
   {
-    id: "Yesería",
+    id: "Yeseria",
     title: "Yesería",
     image: "/assets/img/Small/Yesería.webp",
     banner: "/assets/img/Banner/YeseríaBanner.webp",
