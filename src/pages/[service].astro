@@ -27,7 +27,7 @@ if (!matchedService) {
 }
 ---
 
-<Layout title={matchedService.id}>
+<Layout title={decodeURIComponent(matchedService.id)}>
   <NavBarService />
 
   <main
@@ -38,7 +38,7 @@ if (!matchedService) {
 
     <Details imageBox={matchedService.box} />
 
-    <BannerService banner={matchedService.banner} />
+    <BannerService banner={decodeURIComponent(matchedService.banner)} />
 
     <Us />
 
