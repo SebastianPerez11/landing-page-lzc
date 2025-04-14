@@ -1,7 +1,7 @@
 export const services = [
   {
-    id: "Albañileria",
-    title: "Albañileria",
+    id: "Alba",
+    title: "Alba",
     image: "/assets/img/Small/Albañilería.webp",
     banner: "/assets/img/Banner/AlbañileríaBanner.webp",
     box: "/assets/img/Box/AlbañileríaBox.webp",
