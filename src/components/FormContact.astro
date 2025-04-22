@@ -1,0 +1,51 @@
+---
+import InputForm from "../components/InputForm.astro";
+import IconClose from "../../public/assets/svg/IconClose.astro";
+---
+
+<div
+  id="form"
+  class="px-8 max-sm:px-2 min-h-dvh h-full w-full hidden justify-center items-center absolute transition-all bottom-0 backdrop-blur-md z-20 bg-black/75"
+>
+  <div class="flex w-[1100px] h-[700px] max-sm:h-max bg-[#262626] rounded-md">
+    <img
+      class="h-full max-lg:hidden"
+      src="./assets/img/Small/Form.webp"
+      alt=""
+    />
+    <section
+      class="w-full px-14 py-12 flex max-sm:py-4 max-sm:px-3 flex-col justify-center items-center"
+    >
+      <header class="flex w-full h-full flex-col flex-grow-1">
+        <span class="w-full flex justify-end"
+          ><IconClose id="iconCloseForm" class="w-8 cursor-pointer" /></span
+        >
+        <h1 class="text-xl font-semibold mt-2 max-sm:text-lg">
+          Comunícate con nosotros para cotizar un nuevo presupuesto.
+        </h1>
+        <h2 class="text-lg max-sm:text-base mt-2">
+          (Rellene los siguientes campos)
+        </h2>
+      </header>
+      <form
+        class="w-full h-full flex flex-col gap-3 mt-3 flex-grow-2"
+        action=""
+      >
+        <InputForm text="Nombre completo" type="text" />
+        <InputForm text="Empresa" type="text" />
+        <InputForm text="Email" type="email" />
+        <InputForm text="Teléfono" type="number" />
+        <label for="" class="text-[#D1D1D1] flex flex-col max-sm:text-sm"
+          >Mensaje <textarea
+            class="bg-[#F6F6F6] max-sm:p-[2px] rounded-sm text-[#262626] mt-2 resize-none h-24"
+            name=""
+            id=""></textarea></label
+        >
+        <button
+          class="inline-block max-sm:text-base w-max bg-[#F6F6F6] px-6 p-[6px] max-sm:py-1 text-[#262626] font-bold rounded-sm mt-4"
+          >Enviar Mensaje</button
+        >
+      </form>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ContainSection from "../components/ContainSection.astro";
+import TitleSection from "../components/TitleSection.astro";
+import CardInfo from "../components/CardInfo.astro";
+import Image from "astro/components/Image.astro";
+---
+
+<Layout title="Test">
+  <ContainSection>
+    <TitleSection title="Obras realizadas" />
+    <footer class="w-full grid grid-cols-auto-obras gap-5">
+      <a
+        href="/"
+        class="w-full h-80 relative flex items-end overflow-hidden"
+      >
+        <img
+          title="Imagen de Obrero"
+          alt="Imagen de Obrero"
+          class="w-full h-full object-cover brightness-[.5] transition-transform hover:scale-105"
+        />
+
+        <div
+          class="pointer-events-none w-full py-5 px-6 max-sm:px-3 absolute flex justify-between items-center"
+        >
+          <h3 class="text-2xl max-sm:text-xl font-semibold">
+            Sobre nuestra empresa
+          </h3>
+        </div>
+      </a>
+
+      <div
+        class="w-full h-full flex flex-col py-10 px-8 max-sm:py-8 max-sm:px-3 bg-[#323232] bg-opacity-90 text-lg"
+      >
+        <p class="flex flex-col gap-2 flex-grow max-sm:text-base">
+          <span class="font-semibold"> </span>
+        </p>
+        <span class="text-lg max-sm:text-base font-semibold mt-2"></span>
+        <slot name="contact" />
+      </div>
+    </footer>
+  </ContainSection>
+</Layout>

@@ -11,9 +11,9 @@ import ContainSection from "../components/ContainSection.astro";
 <ContainSection id="contacto">
   <TitleSection title="Contáctanos" />
   <footer class="w-full grid grid-cols-auto-12 gap-5">
-    <a
-      href="/"
-      class="w-full h-80 xl:col-span-8 lg:col-span-6 md:col-span-full max-md:col-span-full relative flex items-end overflow-hidden"
+    <div
+      id="contactButton"
+      class="cursor-pointer w-full h-80 xl:col-span-8 lg:col-span-6 md:col-span-full max-md:col-span-full relative flex items-end overflow-hidden"
     >
       <Image
         src={MapsImage}
@@ -29,7 +29,7 @@ import ContainSection from "../components/ContainSection.astro";
         </h3>
         <IconOpen class="w-7" />
       </div>
-    </a>
+    </div>
 
     <CardInfo
       header="Contáctanos hoy para recibir un presupuesto personalizado."
@@ -45,3 +45,4 @@ import ContainSection from "../components/ContainSection.astro";
     </CardInfo>
   </footer>
 </ContainSection>
+

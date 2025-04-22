@@ -1,47 +1,6 @@
----
-interface Props {
-  title: string;
-}
-
-const { title } = Astro.props;
----
-
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-  </head>
-  <body id="body" class="bg-[#1A1A1A] w-full">
-    <slot />
-  </body>
-</html>
-<style is:global>
-  html {
-    color-scheme: dark;
-    scroll-behavior: smooth;
-  }
-
-  * {
-    line-height: normal;
-  }
-
-  @layer {
-    input[type="number"]::-webkit-outer-spin-button,
-    input[type="number"]::-webkit-inner-spin-button,
-    input[type="number"] {
-      -webkit-appearance: none;
-      margin: 0;
-      -moz-appearance: textfield !important;
-    }
-  }
-</style>
-
-<script data-astro-rerun type="module">
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="description" content="Astro description"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.1.5"><title>Test</title><link rel="stylesheet" href="/_astro/_service_.DSXyzBVG.css"></head> <body id="body" class="bg-[#1A1A1A] w-full">  <section class="undefined w-full h-full flex flex-col gap-5 px-12 xl:px-6 max-sm:px-2 max-w-[1820px]">  <header class="w-full"> <h2 class="text-[32px] max-sm:text-2xl max-xl:text-3xl font-semibold">Obras realizadas</h2> </header> <footer class="w-full grid grid-cols-auto-obras gap-5"> <a href="/" class="w-full h-80 relative flex items-end overflow-hidden"> <img title="Imagen de Obrero" alt="Imagen de Obrero" class="w-full h-full object-cover brightness-[.5] transition-transform hover:scale-105"> <div class="pointer-events-none w-full py-5 px-6 max-sm:px-3 absolute flex justify-between items-center"> <h3 class="text-2xl max-sm:text-xl font-semibold">
+Sobre nuestra empresa
+</h3> </div> </a> <div class="w-full h-full flex flex-col py-10 px-8 max-sm:py-8 max-sm:px-3 bg-[#323232] bg-opacity-90 text-lg"> <p class="flex flex-col gap-2 flex-grow max-sm:text-base"> <span class="font-semibold"></span> </p> <span class="text-lg max-sm:text-base font-semibold mt-2"></span>  </div> </footer>  </section>   <script data-astro-rerun type="module">
   const iconClose = document.querySelector("#iconClose");
   const iconHamburger = document.querySelector("#iconHamburger");
   const menuHidden = document.querySelector("#menuHidden");
@@ -126,4 +85,4 @@ const { title } = Astro.props;
   openForm();
   closeForm();
   resetWindow();
-</script>
+</script></body></html>

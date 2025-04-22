@@ -8,6 +8,7 @@ import Contact from "../layouts/Contact.astro";
 import Footer from "../components/Footer.astro";
 import Details from "../layouts/Details.astro";
 import Us from "../layouts/Us.astro";
+import FormContact from "../components/FormContact.astro";
 import { services } from "../data/service.js";
 import { map } from "astro:schema";
 
@@ -47,5 +48,7 @@ if (!matchedService) {
     <Contact />
 
     <Footer />
+
+    <FormContact />
   </main>
 </Layout>
