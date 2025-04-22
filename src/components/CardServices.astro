@@ -1,5 +1,5 @@
 ---
-const { nameCard, href, title, src, loading } = Astro.props;
+const { nameCard, href, title, alt, src, loading } = Astro.props;
 ---
 
 <a class="h-72 w-full font-semibold" href={href} title={title}>
@@ -9,7 +9,7 @@ const { nameCard, href, title, src, loading } = Astro.props;
     <img
       class="absolute w-full h-full top-0 right-0 object-cover brightness-[.6] transition-transform hover:scale-105"
       src={src}
-      alt={title}
+      alt={alt}
       loading={loading}
     />
     <span class="text-2xl max-sm:text-xl z-10 pointer-events-none"

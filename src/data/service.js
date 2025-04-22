@@ -1,10 +1,11 @@
 export const services = [
   {
-    id: "Albanileria" ,
+    id: "Albanileria",
     title: "Albañileria",
     image: "/assets/img/Small/Albañilería.webp",
     banner: "/assets/img/Banner/AlbañileríaBanner.webp",
     box: "/assets/img/Box/AlbañileríaBox.webp",
+    alt: "Persona colocando ladrillos con cemento",
   },
   {
     id: "Electricidad",
@@ -12,6 +13,7 @@ export const services = [
     image: "/assets/img/Small/Electricidad.webp",
     banner: "/assets/img/Banner/ElectricidadBanner.webp",
     box: "/assets/img/Box/ElectricidadBox.webp",
+    alt: "Técnico trabajando con cables eléctricos en una pared",
   },
   {
     id: "Pintureria",
@@ -19,6 +21,7 @@ export const services = [
     image: "/assets/img/Small/Pinturería.webp",
     banner: "/assets/img/Banner/PintureríaBanner.webp",
     box: "/assets/img/Box/PintureríaBox.webp",
+    alt: "Persona vertiendo pintura desde un balde",
   },
   {
     id: "Plomeria",
@@ -26,6 +29,7 @@ export const services = [
     image: "/assets/img/Small/Plomería.webp",
     banner: "/assets/img/Banner/PlomeríaBanner.webp",
     box: "/assets/img/Box/PlomeríaBox.webp",
+    alt: "Instalación de grifería con herramientas de plomería",
   },
   {
     id: "Yeseria",
@@ -33,6 +37,7 @@ export const services = [
     image: "/assets/img/Small/Yesería.webp",
     banner: "/assets/img/Banner/YeseríaBanner.webp",
     box: "/assets/img/Box/YeseríaBox.webp",
+    alt: "Mano alisando pared con llana metálica",
   },
   {
     id: "Durlock",
@@ -40,5 +45,6 @@ export const services = [
     image: "/assets/img/Small/Durlock.webp",
     banner: "/assets/img/Banner/DurlockBanner.webp",
     box: "/assets/img/Box/DurlockBox.webp",
+    alt: "Trabajador instalando paneles de Durlock",
   },
 ];
