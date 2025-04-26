@@ -9,26 +9,18 @@ import Footer from "../components/Footer.astro";
 import Details from "../layouts/Details.astro";
 import Us from "../layouts/Us.astro";
 import FormContact from "../components/FormContact.astro";
-import { services } from "../data/service.js";
-import { map } from "astro:schema";
+
+import { getServiceById, getAllServicePaths } from "../data/getServiceById";
 
 export async function getStaticPaths() {
-  // Genera las rutas dinámicas usando el campo "id" de cada servicio
-  return services.map((service) => ({ params: { service: service.id } }));
+  return getAllServicePaths();
 }
 
 const { service } = Astro.params;
-
-// Encuentra el servicio correspondiente al `service`
-const matchedService = services.find((s) => s.id === service);
-
-// Si no se encuentra el servicio, lanza un error o maneja el caso
-if (!matchedService) {
-  throw new Error(`No se encontró un servicio con el ID: ${service}`);
-}
+const matchedService = getServiceById(service);
 ---
 
-<Layout title={decodeURIComponent(matchedService.id)}>
+<Layout title=`LZC - ${matchedService.id}`>
   <NavBarService />
 
   <main
@@ -37,7 +29,12 @@ if (!matchedService) {
   >
     <HeroService title={matchedService.title} img={matchedService.image} />
 
-    <Details imageBox={matchedService.box} />
+    <Details
+      imageBox={matchedService.box}
+      title={matchedService.titleCard}
+      body={matchedService.body}
+      subtitle={matchedService.subtitleCard}
+    />
 
     <BannerService banner={matchedService.banner} />
 

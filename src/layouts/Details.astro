@@ -1,9 +1,9 @@
 ---
+const { imageBox, title, subtitle, body } = Astro.props;
+
 import CardInfoService from "../components/CardInfoService.astro";
 import TitleSectionBack from "../components/TitleSectionBack.astro";
 import ContainSection from "../components/ContainSection.astro";
-
-const {imageBox} = Astro.props;
 ---
 
 <ContainSection id="teOfrecemos">
@@ -11,9 +11,9 @@ const {imageBox} = Astro.props;
 
   <footer class="w-full grid grid-cols-auto-12 gap-5">
     <CardInfoService
-      title="Servicio de Albañilería Profesional"
-      body="Nos especializamos en ofrecer un servicio de alta calidad, adaptados a las necesidades de tu proyecto. Ya sea que busques construir desde cero, realizar remodelaciones o hacer reparaciones, nuestro equipo de expertos está listo para transformar tus ideas en realidad."
-      subtitle="¿Qué incluye nuestro servicio de albañilería?"
+      title={title}
+      body={body}
+      subtitle={subtitle}
     />
 
     <img

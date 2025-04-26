@@ -1,5 +1,10 @@
 ---
 const { title, subtitle, body } = Astro.props;
+
+import { getServiceById } from "../data/getServiceById";
+const { service } = Astro.params;
+
+const matchedService = getServiceById(service);
 ---
 
 <div
@@ -17,23 +22,11 @@ const { title, subtitle, body } = Astro.props;
     <span class="font-semibold max-sm:mt-3">
       {subtitle}
     </span>
-    <ul class="flex flex-col gap-2">
-      <li>
-        Construcción de estructuras: Levantamiento de muros, cimientos, bardas y
-        techos, con acabados impecables.
-      </li>
-      <li>
-        Remodelaciones: Transformamos espacios existentes para que luzcan
-        modernos, funcionales y seguros.
-      </li>
-      <li>
-        Reparaciones: Solucionamos problemas como grietas, humedad o deterioro
-        en estructuras para garantizar su durabilidad.
-      </li>
-      <li>
-        Instalación de revestimientos: Colocación de pisos, azulejos, cerámicas
-        y acabados decorativos que mejoran el aspecto de cualquier espacio.
-      </li>
-    </ul>
+
+    <slot name="features">
+      <ul class="flex flex-col gap-2">
+        {matchedService.features.map((feature) => <ul>{feature}</ul>)}
+      </ul>
+    </slot>
   </footer>
 </div>
