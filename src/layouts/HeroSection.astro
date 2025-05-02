@@ -2,6 +2,7 @@
 import ButtonSlide from "../components/ButtonSlide.astro";
 import IconArrowLeftSlide from "../../public/assets/svg/IconArrowLeftSlide.astro";
 import IconArrowRightSlide from "../../public/assets/svg/IconArrowRightSlide.astro";
+import Slide from "../components/Slide.astro";
 ---
 
 <div
@@ -12,93 +13,40 @@ import IconArrowRightSlide from "../../public/assets/svg/IconArrowRightSlide.ast
     class="flex h-full transition-transform duration-500 overflow-hidden"
   >
     <!-- Article == Slide-->
+    <Slide
+      title="Creando Espacios, Construyendo Confianza"
+      paragraph="Convertimos tus ideas en realidad con un enfoque innovador y una calidad insuperable. Contamos con años de experiencia, te ofrecemos un servicio personalizado y sin complicaciones para asegurar el éxito de cada proyecto."
+      class="bg-[url('/assets/img/Slide1.webp')]"
+    />
 
-    <article
-      class="w-screen h-full flex-shrink-0 relative flex items-center justify-center bg-[url('/assets/img/hero-image-2.webp')] bg-cover bg-center"
-    >
-      <div class="absolute inset-0 bg-black/50"></div>
-      <header
-        class="w-full h-full max-w-[1820px] px-12 xl:px-6 max-sm:px-2 py-20 xl:py-10 max-sm:py-10 flex justify-end flex-col gap-5 z-10"
-      >
-        <h1 class="text-5xl max-sm:text-3xl font-semibold">
-          Creando Espacios, Construyendo Confianza
-        </h1>
-        <p class="block text-xl w-[120ch] max-w-full text-pretty max-sm:hidden">
-          Convertimos tus ideas en realidad con un enfoque innovador y una
-          calidad insuperable. Contamos con años de experiencia, te ofrecemos un
-          servicio personalizado y sin complicaciones para asegurar el éxito de
-          cada proyecto.
-        </p>
-        <p
-          class="hidden max-sm:block text-xl w-[120ch] max-w-full text-pretty max-sm:text-base"
-        >
-          Hacemos realidad tus ideas con innovación, calidad y experiencia,
-          ofreciendo un servicio personalizado y sin complicaciones para
-          asegurar el éxito de tus proyectos.
-        </p>
-      </header>
-    </article>
+    <Slide
+      title="Creando Espacios, Construyendo Confianza"
+      paragraph="Convertimos tus ideas en realidad con un enfoque innovador y una calidad insuperable. Contamos con años de experiencia, te ofrecemos un servicio personalizado y sin complicaciones para asegurar el éxito de cada proyecto."
+      class="bg-[url('/assets/img/Slide2.webp')]"
+    />
 
-    <article
-      class="w-screen h-full flex-shrink-0 relative flex items-center justify-center bg-[url('/assets/img/slide-3.webp')] bg-cover bg-top"
-    >
-      <div class="absolute inset-0 bg-black/50"></div>
-      <header
-        class="w-full h-full max-w-[1820px] px-12 xl:px-6 max-sm:px-2 py-20 xl:py-10 max-sm:py-10 flex justify-end flex-col gap-5 z-10"
-      >
-        <h1 class="text-5xl max-sm:text-3xl font-semibold">
-          Creando Espacios, Construyendo Confianza
-        </h1>
-        <p class="block text-xl w-[120ch] max-w-full text-pretty max-sm:hidden">
-          Convertimos tus ideas en realidad con un enfoque innovador y una
-          calidad insuperable. Contamos con años de experiencia, te ofrecemos un
-          servicio personalizado y sin complicaciones para asegurar el éxito de
-          cada proyecto.
-        </p>
-        <p
-          class="hidden max-sm:block text-xl w-[120ch] max-w-full text-pretty max-sm:text-base"
-        >
-          Hacemos realidad tus ideas con innovación, calidad y experiencia,
-          ofreciendo un servicio personalizado y sin complicaciones para
-          asegurar el éxito de tus proyectos.
-        </p>
-      </header>
-    </article>
-
-    <article
-      class="w-screen h-full flex-shrink-0 relative flex items-center justify-center bg-[url('/assets/img/hero-image.webp')] bg-cover bg-center"
-    >
-      <div class="absolute inset-0 bg-black/50"></div>
-      <header
-        class="w-full h-full max-w-[1820px] px-12 xl:px-6 max-sm:px-2 py-20 xl:py-10 max-sm:py-10 flex justify-end flex-col gap-5 z-10"
-      >
-        <h1 class="text-5xl max-sm:text-3xl font-semibold">
-          Creando Espacios, Construyendo Confianza
-        </h1>
-        <p class="block text-xl w-[120ch] max-w-full text-pretty max-sm:hidden">
-          Convertimos tus ideas en realidad con un enfoque innovador y una
-          calidad insuperable. Contamos con años de experiencia, te ofrecemos un
-          servicio personalizado y sin complicaciones para asegurar el éxito de
-          cada proyecto.
-        </p>
-        <p
-          class="hidden max-sm:block text-xl w-[120ch] max-w-full text-pretty max-sm:text-base"
-        >
-          Hacemos realidad tus ideas con innovación, calidad y experiencia,
-          ofreciendo un servicio personalizado y sin complicaciones para
-          asegurar el éxito de tus proyectos.
-        </p>
-      </header>
-    </article>
+    <Slide
+      title="Creando Espacios, Construyendo Confianza"
+      paragraph="Convertimos tus ideas en realidad con un enfoque innovador y una calidad insuperable. Contamos con años de experiencia, te ofrecemos un servicio personalizado y sin complicaciones para asegurar el éxito de cada proyecto."
+      class="bg-[url('/assets/img/Slide3.webp')]"
+    />
   </section>
 
   <!-- Botones de navegación -->
 
-  <ButtonSlide id="prevButton" class="left-4">
+  <ButtonSlide
+    ariaLabel="Flecha izquierda del arrusel de imagenes"
+    id="prevButton"
+    class="left-4"
+  >
     <IconArrowLeftSlide class="w-8" />
   </ButtonSlide>
 
-  <ButtonSlide id="nextButton" class="right-4">
+  <ButtonSlide
+    ariaLabel="Flecha derecha del carrusel de imagenes"
+    id="nextButton"
+    class="right-4"
+  >
     <IconArrowRightSlide class="w-8" />
   </ButtonSlide>
 </div>

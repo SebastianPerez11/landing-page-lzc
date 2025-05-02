@@ -1,0 +1,23 @@
+---
+export interface Props {
+  class?: string;
+  title?:string;
+  paragraph?:string;
+}
+---
+
+<article
+  class=`${Astro.props.class} w-screen h-full flex-shrink-0 relative flex items-center justify-center bg-[url('/assets/img/Slide1.webp')] bg-cover bg-center`
+>
+  <div class="absolute inset-0 bg-black/50"></div>
+  <header
+    class="w-full h-full max-w-[1820px] px-12 xl:px-6 max-sm:px-2 py-20 xl:py-10 max-sm:py-10 flex justify-end flex-col gap-5 z-10"
+  >
+    <h1 class="text-5xl max-sm:text-3xl font-semibold">
+      {Astro.props.title}
+    </h1>
+    <p class="block text-xl w-[120ch] max-w-full text-pretty max-sm:hidden">
+      {Astro.props.paragraph}
+    </p>
+  </header>
+</article>
